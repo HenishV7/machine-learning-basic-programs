@@ -41,6 +41,7 @@ X = np.append(arr = np.ones((50,1)).astype(int), values = X, axis = 1)
 X_opt = X[:, [0,1,2,3,4,5]]
 X_opt = X_opt.astype(np.float64)
 regressor_OLS = sm.OLS(endog = Y, exog = X_opt).fit()
+#Check p value by running "regrssor_OLS.summary()" and remove highest p valued column from X_opt and repeat this steps till you get value of p= 0.05
 X_opt = X[:, [0,1,2,4,5]]
 X_opt = X_opt.astype(np.float64)
 regressor_OLS = sm.OLS(endog = Y, exog = X_opt).fit()
