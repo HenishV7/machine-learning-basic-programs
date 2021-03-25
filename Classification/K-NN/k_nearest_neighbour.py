@@ -22,7 +22,7 @@ sc = StandardScaler()
 X_train= sc.fit_transform(X_train)
 X_test = sc.transform(X_test)
 
-#Training the Logistic Regression model on the Training Set 
+#Training the KNN model on the Training Set 
 from sklearn.neighbors import KNeighborsClassifier
 classifier = KNeighborsClassifier()
 classifier.fit(X_train, Y_train)
